@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class hinhchunhat
+{
+	private:
+		int chieudai;
+		int chieurong;
+	public:
+		hinhchunhat(int chieudai=0, int chieurong=0)
+			{
+				this->chieudai=chieudai;
+				this->chieurong=chieurong;
+			}	
+		~hinhchunhat()
+			{
+			}
+		void nhap()
+			{
+				cout<<"Nhap chieu dai hinh chu nhat : ";
+				cin>>chieudai;
+				cout<<"Nhap chieu rong hinh chu nhat : ";
+				cin>>chieurong;
+			}
+		int chuvi()
+			{
+				return (chieudai + chieurong)*2;
+			}
+		int dientich()
+			{
+				return  chieudai*chieurong;
+			}
+		void xuat()
+			{
+				cout<<"Chieu dai hcn : "<<chieudai<<endl;
+				cout<<"Chieu rong hcn : "<<chieurong<<endl;
+				cout<<"Chu vi hcn : "<<chuvi()<<endl;
+				cout<<"Dien tich hcn : "<<dientich();
+			}
+};
+int main()
+{
+	hinhchunhat hcn;
+	hcn.nhap();
+	hcn.xuat();
+}
